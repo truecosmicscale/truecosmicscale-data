@@ -1,0 +1,36 @@
+# True Cosmic Scale - Video 01 ranking rubric v1 (scoring verified 2026-10-10)
+# Rule: flags may only change with a cited source in moons.csv. Weights/thresholds may NOT change after the first full ranking is shown.
+version: 1
+total_formula: "A + B + C + D + 2*E"   # script: "rarity counts extra"
+max_total: 30
+group_rule: "Entry covering several moons: a flag is 1 only if true for the MAJORITY of its members."
+tie_break: ["A", "B", "C", "D", "name"]   # higher first; entries tied on total also share joint_rank in moons_ranked.csv
+criteria:
+  A_geologically_alive_now:
+    A1: "Eruptions or plumes directly observed"
+    A2: "Surface younger than ~100 Myr (crater-count or equivalent)"
+    A3: "Ongoing internal heating strong enough to sustain volcanism or a liquid layer (documented)"
+    A4: "Surface change documented between observations"
+    A5: "Recent/active tectonics (faults, ridges younger than ~1 Gyr)"
+  B_orbit_weirdness:
+    B1: "Retrograde orbit"
+    B2: "Eccentricity > 0.1"
+    B3: "Resonance, co-orbital relation, or binary barycentre"
+    B4: "Chaotic or non-synchronous spin"
+    B5: "Predicted breakup/impact on a known timescale (decay or predicted collision)"
+  C_shape_or_surface_strangeness:
+    C1: "Strongly non-spherical (longest/shortest axis > 1.3)"
+    C2: "Relief > 10 km, or largest crater/basin >= 25% of body diameter"
+    C3: "Albedo contrast >= 3:1, or striking colour boundary"
+    C4: "Porosity >= 30% or bulk density < 1.0 g/cc"
+    C5: "Surface morphology found on no other moon type (sponge, walnut, patchwork, tiger stripes...)"
+  D_oceans_lakes_air:
+    D1: "Any detectable atmosphere or exosphere"
+    D2: "Substantial atmosphere (> 1 mbar)"
+    D3: "Surface liquid (lakes/seas)"
+    D4: "Subsurface liquid ocean confirmed or strongly supported"
+    D5: "Seasonal/weather volatile cycle observed"
+  E_rarity:
+    trait_rule: "ONE measurable attribute taken from the script's headline claim for that entry. No 'and'. A size qualifier is allowed only if the script's own claim uses it. Must be a property of the moon, not geometry (e.g. eclipse matching does not count)."
+    count: "N = number of known moons with the trait (counting the entry). others = N-1"
+    mapping: {"0 others": 5, "1": 4, "2-3": 3, "4-9": 2, "10-99": 1, ">=100": 0}
