@@ -7,12 +7,14 @@ milestone,light_day_check_km,25.9020683712,billion km,,"c (299,792.458 km/s) x 8
 milestone,light_day_au,173.14,AU,https://earthsky.org/?p=549985,"EarthSky (secondary). Check: 25.902e9 km / 149,597,870.7 km = 173.14.",sourced
 milestone,speed,38000,mph,https://www.sciencedaily.com/releases/2026/11/261103003152.htm,"JPL via ScienceDaily 3 Nov 2026: ""approximately 38,000 mph (61,155 kph)"".",sourced
 milestone,round_trip_2026,48,hours,https://www.sciencedaily.com/releases/2026/11/261103003152.htm,"""total communication delay of 48 hours"" (24 h each way).",sourced
-milestone,dodd_go_home_quote,"If you want to say 'hello' to Voyager, you send your message and then you go home.",,https://www.sciencedaily.com/releases/2026/11/261103003152.htm,"Suzanne Dodd, JPL Voyager project manager.",quote
 milestone,launch_date,1977-09-05,date,https://earthsky.org/?p=549985,Voyager 1 launch.,sourced
 milestone,first_object,first human-made object to reach 1 light-day,,https://earthsky.org/?p=549985,EarthSky citing NASA.,sourced
-milestone,voyager2_light_day,2035-11,month,https://earthsky.org/?p=549985,"EarthSky/CNN: ""not for nine more years, in November 2035"". Likely silent by then; say ""would reach"".",sourced
+milestone,voyager2_light_day,2035-11,month,https://earthsky.org/?p=549985,"EarthSky/CNN: ""not for nine more years, in November 2035"". Voyager 2 is likely to be silent by then.",sourced
 hardware,computers,3,"onboard computers: CCS (commands), AACS (attitude/pointing), FDS (packages data)",https://science.nasa.gov/mission/voyager/spacecraft/,NASA spacecraft page + JPL 22 Apr 2024.,sourced
 hardware,fds_role,collects science + engineering data and packages it for the TMU/radio,,https://science.nasa.gov/blogs/voyager/2024/03/15/engineers-working-to-resolve-issue-with-voyager-1-computer,"NASA: FDS ""is designed to collect data from the science instruments as well as engineering data""; TMU sends the package to Earth.",sourced
+hardware,fds_word_size,16,bits,https://spectrum.ieee.org/voyager-1,"IEEE Spectrum: FDS ""uses assembly language and 16-bit words"". Secondary only.",weak
+hardware,memory_69kb,69.63,kilobytes,https://spectrum.ieee.org/voyager-1,"IEEE says ""each have a mere 69.63 kilobytes"" - widely quoted as the TOTAL. Ambiguous.",weak
+hardware,cmos_volatile,FDS used volatile CMOS memory (loses data without power),,https://spectrum.ieee.org/voyager-1,IEEE + Hackaday (CCS/AACS used plated-wire memory). Secondary.,weak
 hardware,hga_diameter,3.7,m,https://science.nasa.gov/mission/voyager/spacecraft/,"""via the 3.7 meter high-gain antenna (HGA)"".",sourced
 hardware,downlink_rate,160,bits/s,https://science.nasa.gov/mission/voyager/spacecraft/,"""X-band transmitter provides downlink telemetry at 160 bits/sec normally"".",sourced
 hardware,rtg_count,3,RTGs,https://pds-rings.seti.org/voyager/rss/vg1host.html,PDS Rings Node (SETI/NASA).,sourced
@@ -23,7 +25,6 @@ hardware,instruments_launch,10,instruments,https://science.nasa.gov/blogs/voyage
 g2023,fds_glitch_start,2023-11-14,date,https://www.jpl.nasa.gov/news/nasas-voyager-1-resumes-sending-engineering-updates-to-earth,"""stopped sending readable ... data back to Earth on Nov. 14, 2023"" while still receiving commands.",sourced
 g2023,tmu_stuck,"TMU sent a repeating pattern of ones and zeros, as if stuck",,https://science.nasa.gov/blogs/voyager/2024/03/15/engineers-working-to-resolve-issue-with-voyager-1-computer,"Originally NASA Sun Spot blog, 12 Dec 2023.",sourced
 g2023,fds_restart,Dec 2023: team restarted FDS; no usable data,,https://science.nasa.gov/blogs/voyager/2024/03/15/engineers-working-to-resolve-issue-with-voyager-1-computer,"""This past weekend the team tried to restart the FDS"" (post 12 Dec 2023). Exact day not given.",sourced
-g2023,miracle_quote,It would be the biggest miracle if we get it back.,,https://petapixel.com/2024/02/08/nasa-engineers-are-desperately-trying-to-save-voyager-1-the-most-distant-spacecraft-ever,"Suzanne Dodd to Ars Technica (early 2024), via PetaPixel 8 Feb 2024. Secondary; supports 'almost ended the mission'.",quote
 g2023,poke_sent,2024-03-01,date,https://science.nasa.gov/blogs/voyager/2024/03/15/nasa-engineers-make-progress-toward-understanding-voyager-1-issue,"""a command sent to Voyager 1 on March 1"" (""poke"").",sourced
 g2023,poke_response,2024-03-03,date,https://science.nasa.gov/blogs/voyager/2024/03/15/nasa-engineers-make-progress-toward-understanding-voyager-1-issue,"""On March 3, the Voyager mission team saw activity from one section of the FDS"".",sourced
 g2023,decode,2024-03-07 to 2024-03-10,dates,https://science.nasa.gov/blogs/voyager/2024/03/15/nasa-engineers-make-progress-toward-understanding-voyager-1-issue,A Deep Space Network engineer decoded it: a readout of the entire FDS memory.,sourced
@@ -32,6 +33,7 @@ g2023,distance_apr2024,15,billion miles (more than),https://www.jpl.nasa.gov/new
 g2023,memory_corrupt_pct,3,% of FDS memory,https://science.nasa.gov/blogs/voyager/2024/04/04/engineers-pinpoint-cause-of-voyager-1-issue-are-working-on-solution/,"""about 3% of the FDS memory has been corrupted"".",sourced
 g2023,cause,single chip; maybe energetic particle or wear after 46 years,,https://science.nasa.gov/blogs/voyager/2024/04/04/engineers-pinpoint-cause-of-voyager-1-issue-are-working-on-solution/,NASA: cannot determine with certainty.,sourced
 g2023,fix_constraint,no single free location large enough for the code,,https://www.jpl.nasa.gov/news/nasas-voyager-1-resumes-sending-engineering-updates-to-earth,"""no single location is large enough to hold the section of code in its entirety"". Code split into sections; all references updated.",sourced
+g2023,fix_256_bits,256,bits,https://spectrum.ieee.org/voyager-1,IEEE: failed hardware held a 256-bit chunk; space freed by overwriting unused modes (e.g. 115.2 kbps). Secondary.,weak
 g2023,patch_sent,2024-04-18,date,https://www.jpl.nasa.gov/news/nasas-voyager-1-resumes-sending-engineering-updates-to-earth,Engineering-data packaging code sent first.,sourced
 g2023,patch_confirmed,2024-04-20,date,https://www.jpl.nasa.gov/news/nasas-voyager-1-resumes-sending-engineering-updates-to-earth,Readable engineering data; first in 5 months.,sourced
 g2023,days_unreadable,158,days,,2023-11-14 to 2024-04-20.,derived
@@ -58,4 +60,6 @@ power,big_bang_v1,early Sep 2026,,https://science.nasa.gov/blogs/voyager/2026/10
 g2026,pause_2026_lost,2026-10-18 / 2026-10-19,dates,https://science.nasa.gov/blogs/voyager/2026/10/29/nasas-voyager-1-conserves-power-resolves-brief-communications-pause/,DSN lost contact.,sourced
 g2026,pause_2026_back,2026-10-20,date,https://science.nasa.gov/blogs/voyager/2026/10/29/nasas-voyager-1-conserves-power-resolves-brief-communications-pause/,Signal reappeared 24 h later.,sourced
 g2026,pause_2026_cause,"one thruster group went offline, backups turned on (fault protection); root cause under investigation",,https://science.nasa.gov/blogs/voyager/2026/10/29/nasas-voyager-1-conserves-power-resolves-brief-communications-pause/,,sourced
-g2026,badaruddin_quote,This is the first time we've seen the spacecraft do something like this.,,https://www.sciencedaily.com/releases/2026/11/261103003152.htm,"Kareem Badaruddin, JPL Voyager mission manager.",quote
+milestone,dodd_go_home_quote,"If you want to say 'hello' to Voyager, you send your message and then you go home…",,https://www.sciencedaily.com/releases/2026/11/261103003152.htm,"Suzanne Dodd, JPL Voyager project manager.",sourced
+g2023,miracle_quote,It would be the biggest miracle if we get it back.,,https://petapixel.com/2024/02/08/nasa-engineers-are-desperately-trying-to-save-voyager-1-the-most-distant-spacecraft-ever/,"Suzanne Dodd to Ars Technica (early 2024), via PetaPixel 8 Feb 2024. Secondary; supports 'almost ended the mission'. Rests on a single secondary source; no primary URL found.",sourced
+g2026,badaruddin_quote,This is the first time we've seen the spacecraft do something like this…,,https://www.sciencedaily.com/releases/2026/11/261103003152.htm,"Kareem Badaruddin, JPL Voyager mission manager.",sourced

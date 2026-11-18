@@ -7,7 +7,7 @@ Every number in the video comes from one of the two tables below.
 
 | File | What it is |
 |---|---|
-| `facts.csv` | Every fact and figure used in the script: value, unit, source link, the sentence it rests on, and a status (`sourced` = quoted from the cited page, `derived` = arithmetic on sourced numbers, `quote` = a spoken or written quotation). |
+| `facts.csv` | Every fact and figure used in the script: value, unit, source link, the sentence it rests on, and a status (`sourced` = quoted from the cited page, `derived` = arithmetic on sourced numbers, `weak` = a figure from a secondary source that NASA does not confirm; it was not used in the video). Spoken and written quotations are `sourced` against the page that prints them. |
 | `voyager1_distance.csv` | Voyager 1's distance from Earth, one point every 30 days from 1977-09-06 to 2026-12-31, plus one point at 2026-11-18 10:16:07 UTC, from JPL Horizons. |
 
 ## Distance table
@@ -27,7 +27,7 @@ The small yearly ripples in the one-way light time are Earth's own orbit around 
 
 ## Sources
 
-Each row of `facts.csv` has its source link. Sources are NASA and JPL pages, with a few news reports and one IEEE article where NASA does not give the figure; those rows say so in `source_note`. Four figures from secondary sources that NASA does not confirm (the flight data subsystem's word size, memory size, memory type and the size of the failed memory block) were left out of the video and are not in this table.
+Each row of `facts.csv` has its source link. Sources are NASA and JPL pages, with a few news reports and one IEEE article where NASA does not give the figure; those rows say so in `source_note`. Four figures from secondary sources that NASA does not confirm (the flight data subsystem's word size, memory size, memory type and the size of the failed memory block) were left out of the video. They are in this table with status `weak`, so you can see what was held back and why.
 
 ## Licence
 
